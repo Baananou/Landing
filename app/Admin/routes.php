@@ -22,5 +22,7 @@ Route::group([
     $router->resource('works', WorkController::class);
     
     $router->resource('subs', SubController::class);
+
+    $router->resource('testimonials', TestimonialController::class);
 });
 

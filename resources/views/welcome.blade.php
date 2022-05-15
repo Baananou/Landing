@@ -3,6 +3,7 @@
     $partners =DB::table('partners')->get();
     $projects =DB::table('projects')->get();
     $works=DB::table('works')->get();
+    $testimonials=DB::table('testimonials')->get();
 ?>
 <!DOCTYPE html>
 <html lang="en" class="no-js">
@@ -217,21 +218,22 @@
                     <!-- Swiper -->
                     <div class="clients-slider">
                         <div class="swiper-wrapper">
+                            @foreach($testimonials as $testimonial)
                             <div class="swiper-slide">
                                 <div class="card shadow-lg">
                                     <div class="card-body p-4">
-                                        <img src="images/users/user-1.jpg" alt="" class="rounded-circle shadow-lg" width="60" />
-                                        <h5 class="my-4 pt-2 fs-18 lh-base">" Excellent support for a tricky issue related to our customization of the template."</h5>
-
-                                        <h6 class="mb-0">Brightlight books</h6>
-                                        <p class="mb-0">Ubold Customer</p>
+                                        <img src="{{('uploads/'.$testimonial->image)}}" alt="" class="rounded-circle shadow-lg" width="60" />
+                                        <h5 class="my-4 pt-2 fs-18 lh-base">" {{$testimonial->text}}"</h5>
+                                        <h6 class="mb-0">{{$testimonial->name}}</h6>
+                                        <p class="mb-0">{{$testimonial->role}}</p>
                                         <div class="position-absolute bottom-0 end-0">
                                             <img src="images/agency/quote.png" alt="" height="45" />
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                            <div class="swiper-slide">
+                            @endforeach
+                            <!-- <div class="swiper-slide">
                                 <div class="card shadow-lg">
                                     <div class="card-body p-4">
                                         <img src="images/users/user-2.jpg" alt="" class="rounded-circle shadow-lg" width="60" />
@@ -258,7 +260,8 @@
                                         </div>
                                     </div>
                                 </div>
-                            </div>
+                            </div> -->
+
                         </div>
                         <!-- Add Pagination -->
                         <div class="swiper-pagination"></div>
@@ -270,7 +273,7 @@
     <!-- Testimonials end -->
 
     <!-- counter start -->
-    <section class="section bg-light">
+    <!-- <section class="section bg-light">
         <div class="container">
             <div class="row" id="counter">
                 <div class="col-sm-6 col-lg-3">
@@ -307,11 +310,11 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section> -->
     <!-- counter end -->
 
     <!-- team start -->
-    <section class="section" id="team">
+    <!-- <section class="section" id="team">
         <div class="container">
             <div class="row justify-content-center mb-5">
                 <div class="col-md-8 col-lg-6 text-center">
@@ -352,7 +355,7 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section> -->
     <!-- team end -->
 
     <!-- footer & cta start -->
@@ -361,7 +364,7 @@
             <div class="container">
                 <div class="row bg-dark cta-bg p-5 rounded align-items-center">
                     <div class="col-lg-6">
-                        <h3 class="text-white fs-26 mb-3">Subscribe our newsletter</h3>
+                        <h3 class="text-white fs-26 mb-3">Contact Me !</h3>
                         <p class="text-white opacity-75 mb-4 mb-lg-0">Et harum quidem rerum facilis est us et expedita distinctio am libero tempore cum soluta nobis.</p>
                     </div>
                     <div class="col-lg-5 offset-lg-1">
