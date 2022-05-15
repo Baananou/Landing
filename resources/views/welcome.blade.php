@@ -14,7 +14,7 @@
     <meta name="author" content="CODETANKTHEMES" />
 
     <!-- Site Title -->
-    <title>CODETANK - Responsive Bootstrap 5 Landing Page Template</title>
+    <title>Dynamic Landing</title>
     <!-- Site favicon -->
     <link rel="shortcut icon" href="images/favicon.ico" />
 
@@ -37,7 +37,7 @@
         <div class="container">
             <!-- LOGO -->
             <a class="logo text-uppercase" href="index.html">
-                <img src="{{asset('uploads/'.$settings->logo)}}" style="height: 100px;" alt=""/>
+                <img src="{{asset('uploads/'.$settings->logo)}}" style="height: 80px;" alt=""/>
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
                     <i class="mdi mdi-menu"></i>
@@ -54,11 +54,11 @@
                         <a href="#projects" class="nav-link">Projects</a>
                     </li>
                     <li class="nav-item">
-                        <a href="#testimonial" class="nav-link">Testimonial</a>
+                        <a href="#Feedback" class="nav-link">Feedback</a>
                     </li>
-                    <li class="nav-item">
+                    <!-- <li class="nav-item">
                         <a href="#team" class="nav-link">Team</a>
-                    </li>
+                    </li> -->
                 </ul>
             </div>
         </div>
@@ -72,7 +72,9 @@
                 <div class="col-lg-6">
 
                     <h1 class="hero-title fw-bold mb-4">{{$settings->home_title}}</h1>
+                    <h6>I know that I know nothing.</h6>
                     <p class="text-muted mb-5 fs-18">{{$settings->home_text}}</p>
+                    <br>
                     <div class="d-flex align-items-center mb-4 mb-lg-0">
                         <a href="javascript:void(0);" class="btn btn-gradient-success rounded-pill me-4">More About Us <i class="mdi mdi-chevron-right ms-1"></i></a>
 
@@ -128,8 +130,8 @@
         <div class="container">
             <div class="row justify-content-center mb-5">
                 <div class="col-md-8 col-lg-6 text-center">
-                    <h6 class="subtitle">What We Do</h6>
-                    <h2 class="title">The things motivates me is commen form of motivation.</h2>
+                    <h6 class="subtitle">About me</h6>
+                    <h2 class="title">The things that motivates me.</h2>
                 </div>
             </div>
 
@@ -138,7 +140,7 @@
                 <div class="col-md-4">
                     <div class="mt-5">
                         <div class="about-icon ms-3">
-                            <img src="{{asset('uploads/'.$work->image)}}" alt="" class="img-fluid" />
+                            <img src="{{asset('uploads/'.$work->image)}}" height="70px" width="70px" alt="" class="img-fluid" />
                         </div>
                         <h5 class="fs-22 mt-4 pt-3 mb-3">{{$work->title}}</h5>
                         <p class="text-muted">{{$work->text}}</p>
@@ -175,8 +177,9 @@
         <div class="container">
             <div class="row justify-content-center mb-5">
                 <div class="col-md-8 col-lg-6 text-center">
-                    <h6 class="subtitle">Our Projects</h6>
-                    <h2 class="title">A great design brings thousands of great results.</h2>
+                    <h6 class="subtitle">Projects</h6>
+                    <h2 class="title">"Have no fear of perfection...you’ll never reach it."</h2>
+                    <h7>Salvador Dali, artist</h7>
                 </div>
             </div>
 
@@ -202,14 +205,14 @@
     </section>
     <!-- Projects end -->
 
-    <!-- Testimonials start -->
-    <section class="section testi-bg" id="testimonial">
+    <!-- Feedback start -->
+    <section class="section testi-bg" id="Feedback">
         <div class="container">
             <div class="row justify-content-center mb-5">
                 <div class="col-md-8 col-lg-6 text-center">
-                    <h6 class="subtitle text-dark">Testimonial</h6>
-                    <h2 class="title">Client Feedback</h2>
-                    <p class="text-muted">Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut consequuntur magni dolores.</p>
+                    <h6 class="subtitle text-dark">Clients Feedbacks</h6>
+                    <h2 class="title">"We don't want to push our ideas on to customers, we simply want to make what they want."</h2>
+                    <h7>Laura Ashley</h7>   
                 </div>
             </div>
 
@@ -270,7 +273,7 @@
             </div>
         </div>
     </section>
-    <!-- Testimonials end -->
+    <!-- Feedback end -->
 
     <!-- counter start -->
     <!-- <section class="section bg-light">
@@ -388,7 +391,7 @@
                     <a href="#" class="text-muted">{{$settings->contact_email}}</a>
                     <p class="text-muted">{{$settings->contact_number}}</p>
                 </div>
-                <div class="col-lg-9">
+                <!-- <div class="col-lg-9">
                     <div class="row">
                         <div class="col-sm-12 col-md-12">
                             <h5 class="fs-22 mb-3 fw-semibold">About Us</h5>
@@ -402,7 +405,7 @@
                         </div>
 
                     </div>
-                </div>
+                </div> -->
             </div>
         </div>
     </section>
