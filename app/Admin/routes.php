@@ -18,5 +18,9 @@ Route::group([
     $router->resource('partners', PartnerController::class);
 
     $router->resource('projects', ProjectController::class);
+
+    $router->resource('works', WorkController::class);
+    
+    $router->resource('subs', SubController::class);
 });
 

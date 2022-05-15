@@ -2,6 +2,7 @@
     $settings = DB::table('settings')->first();
     $partners =DB::table('partners')->get();
     $projects =DB::table('projects')->get();
+    $works=DB::table('works')->get();
 ?>
 <!DOCTYPE html>
 <html lang="en" class="no-js">
@@ -132,17 +133,18 @@
             </div>
 
             <div class="row">
+                @foreach($works as $work)
                 <div class="col-md-4">
                     <div class="mt-5">
                         <div class="about-icon ms-3">
-                            <img src="images/agency/icon/1.png" alt="" class="img-fluid" />
+                            <img src="{{asset('uploads/'.$work->image)}}" alt="" class="img-fluid" />
                         </div>
-                        <h5 class="fs-22 mt-4 pt-3 mb-3">Strategy & Research</h5>
-                        <p class="text-muted">Et harum quidem as rerum facilis us est et distinctio nam libero temp soluta nobis esteligendi optio.</p>
-
+                        <h5 class="fs-22 mt-4 pt-3 mb-3">{{$work->title}}</h5>
+                        <p class="text-muted">{{$work->text}}</p>
                     </div>
                 </div>
-                <div class="col-md-4">
+                @endforeach
+                <!-- <div class="col-md-4">
                     <div class="mt-5">
                         <div class="about-icon ms-3">
                             <img src="images/agency/icon/2.png" alt="" class="img-fluid" />
@@ -161,7 +163,7 @@
                         <p class="text-muted">Et harum quidem as rerum facilis us est et distinctio nam libero temp soluta nobis esteligendi optio.</p>
 
                     </div>
-                </div>
+                </div> -->
             </div>
         </div>
     </section>
